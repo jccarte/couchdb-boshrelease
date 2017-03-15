@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm /var/vcap/packages/couchdb/etc/local.ini
+ln -s /var/vcap/jobs/couchdb/config/local.ini /var/vcap/packages/couchdb/etc/local.ini
+rm /var/vcap/packages/couchdb/etc/vm.args
+ln -s /var/vcap/jobs/couchdb/config/vm.args /var/vcap/packages/couchdb/etc/vm.args

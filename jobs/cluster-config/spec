@@ -1,0 +1,14 @@
+---
+name: cluster-config
+templates:
+  errand.sh.erb: bin/run
+properties:
+  cluster.nodes:
+    description: "List of IPs for couchdb 2.0 nodes"
+    default: []
+  cluster.user:
+    description: "CouchDB 2.0 Cluster Admin User"
+    default: ~
+  cluster.password:
+    description: "CouchDB 2.0 Cluster Admin Password"
+    default: ~

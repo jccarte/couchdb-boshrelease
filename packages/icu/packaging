@@ -10,7 +10,7 @@ export HOME=/var/vcap
 
 
 
-tar xfv icu/icu4c-52_1-src.tgz
+tar xfv icu/icu4c-58_2-src.tgz
 cd icu/source
 chmod +x runConfigureICU configure install-sh
 ./runConfigureICU Linux --prefix=${BOSH_INSTALL_TARGET}
