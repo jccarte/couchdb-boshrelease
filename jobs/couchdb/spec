@@ -11,6 +11,8 @@ templates:
   bin/monit_debugger: bin/monit_debugger
   config/local.ini: config/local.ini 
   config/vm.args: config/vm.args
+  config/cert.pem.erb: config/cert.pem
+  config/key.pem.erb: config/key.pem
   data/properties.sh.erb: data/properties.sh
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
@@ -36,3 +38,12 @@ properties:
   couchdb.persistent_cookies:
     description: "Makes cookies persistent if true."
     default: false
+  couchdb.enable_ssl:
+    description: "Enable SSL on port 6984"
+    default: false
+  couchdb.ssl.cert:
+    description: "SSL Certificate"
+    default: ~
+  couchdb.ssl.key:
+    description: "SSL Key"
+    default: ~
