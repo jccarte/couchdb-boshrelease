@@ -18,7 +18,10 @@ export JS_CFLAGS=" -DXP_UNIX -I/var/vcap/packages/spidermonkey/include/js"
 export JS_LIBS="-L/var/vcap/packages/spidermonkey/lib -lmozjs185  -ldl  -lm -ldl"
 
 tar xfv couchdb/apache-couchdb-2.0.0.tar.gz
+tar xzvf couchdb/fauxton-master-release.tar.gz
 cp couchdb/rebar.config.script apache-couchdb-2.0.0/src/couch/rebar.config.script
+rm -rf apache-couchdb-2.0.0/share/www/*
+mv fauxton/* apache-couchdb-2.0.0/share/www/.
 cd apache-couchdb-2.0.0
 ./configure
 make release

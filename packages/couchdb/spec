@@ -6,4 +6,5 @@ dependencies:
 - icu
 files:
 - couchdb/apache-couchdb-2.0.0.tar.gz
+- couchdb/fauxton-master-release.tar.gz
 - couchdb/rebar.config.script
