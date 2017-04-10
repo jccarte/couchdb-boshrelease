@@ -8,6 +8,7 @@ packages:
 templates:
   bin/pre-start.erb: bin/pre-start
   bin/couchdb_ctl: bin/couchdb_ctl
+  bin/hash_pass.escript: bin/hash_pass.escript
   bin/monit_debugger: bin/monit_debugger
   config/local.ini: config/local.ini 
   config/vm.args: config/vm.args
@@ -29,9 +30,15 @@ properties:
   couchdb.cluster.replicas:
     description: "The number of copies there is of every document. Replicas."
     default: 3
+  couchdb.httpd_auth_secret:
+    description: "auth secret shared by all cluster nodes"
+    default: ~
   couchdb.user:
     description: "CouchDB 2.0 Cluster Admin User"
     default: admin
+  couchdb.password_salt:
+    description: "Salt for Admin User"
+    default: ~
   couchdb.password:
     description: "CouchDB 2.0 Cluster Admin Password"
     default: password

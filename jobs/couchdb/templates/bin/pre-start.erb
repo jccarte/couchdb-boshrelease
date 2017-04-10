@@ -1,6 +1,10 @@
 #!/bin/bash
 
-rm /var/vcap/packages/couchdb/etc/local.ini
+mv /var/vcap/packages/couchdb/etc/local.ini /var/vcap/packages/couchdb/etc/local.ini_orig
 ln -s /var/vcap/jobs/couchdb/config/local.ini /var/vcap/packages/couchdb/etc/local.ini
-rm /var/vcap/packages/couchdb/etc/vm.args
+mv /var/vcap/packages/couchdb/etc/vm.args /var/vcap/packages/couchdb/etc/vm.args_orig
 ln -s /var/vcap/jobs/couchdb/config/vm.args /var/vcap/packages/couchdb/etc/vm.args
+
+export HOME=/home/vcap
+chmod +x /var/vcap/jobs/couchdb/bin/hash_pass.escript
+/var/vcap/jobs/couchdb/bin/hash_pass.escript <%= p("couchdb.user") %> <%= p("couchdb.password") %> <%= p("couchdb.password_salt") %> >> /var/vcap/jobs/couchdb/config/local.ini
