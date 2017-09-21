@@ -2,6 +2,12 @@
 name: cluster-config
 templates:
   errand.sh.erb: bin/run
+
+consumes:
+  - name: couchdb_nodes
+    type: couchdb_cluster
+    optional: true
+
 properties:
   cluster-config.nodes:
     description: "List of IPs for couchdb 2.0 nodes"

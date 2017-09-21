@@ -1,7 +1,7 @@
 #!/usr/bin/env /var/vcap/packages/erlang/bin/escript
-%%! -pa /var/vcap/packages/couchdb/lib/couch-2.0.0/ebin
+%%! -pa /var/vcap/packages/couchdb/lib/couch-2.1.0/ebin
 
--include("/var/vcap/packages/couchdb/lib/couch-2.0.0/include/couch_db.hrl").
+-include("/var/vcap/packages/couchdb/lib/couch-2.1.0/include/couch_db.hrl").
 main([Username, Password, SaltString]) ->
   try
     Pass = ?l2b(Password),

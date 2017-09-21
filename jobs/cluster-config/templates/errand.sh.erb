@@ -3,6 +3,7 @@
 set -e
 set -x
 
+
 <% if p("cluster-config.nodes").empty? %>
 <% else %>
   <% p("cluster-config.nodes").each do |node| %>
