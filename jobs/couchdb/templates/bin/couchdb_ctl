@@ -9,6 +9,8 @@ source /var/vcap/jobs/couchdb/helpers/ctl_setup.sh 'couchdb'
 export LANG=en_US.UTF-8
 export LD_LIBRARY_PATH=/var/vcap/packages/icu/lib:/var/vcap/packages/spidermonkey/lib
 
+ulimit -n 65536
+
 case $1 in
 
   start)
