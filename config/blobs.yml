@@ -1,2 +1,18 @@
----
-{}
+autoconf/autoconf-2.13.tar.gz:
+  size: 443844
+  sha: e4826c8bd85325067818f19b2b2ad2b625da66fc
+couchdb/apache-couchdb-2.1.1.tar.gz:
+  size: 12132981
+  sha: 794db4292b4772bdb9f199d906a368b8ff7499f3
+erlang/otp_src_19.2.tar.gz:
+  size: 220712960
+  sha: 20c4e668b41d0f5981f70242e724776bca616bef
+icu/icu4c-58_2-src.tgz:
+  size: 23369902
+  sha: b67913c90a484c59fda011797c6f3959d84bdc7c
+python/Python-2.7.13.tgz:
+  size: 17076672
+  sha: dce2b862a30099ee48c19a7c34e2d7c2eeff5670
+spidermonkey/js185-1.0.0.tar.gz:
+  size: 6164605
+  sha: 52a01449c48d7a117b35f213d3e4263578d846d6

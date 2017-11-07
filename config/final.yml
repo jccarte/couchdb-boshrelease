@@ -6,3 +6,4 @@ blobstore:
     access_key_id: AKIAIS3JOKWFRRYXOYKQ
     secret_access_key: 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
     encryption_key: mysecretkey
+final_name: couchdb
