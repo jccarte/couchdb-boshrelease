@@ -2,4 +2,4 @@
 name: icu
 dependencies: []
 files:
-- icu/icu4c-52_1-src.tgz
+- icu/icu4c-58_2-src.tgz

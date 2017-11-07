@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+set -x
+
+
+<% if p("cluster-config.nodes").empty? %>
+<% else %>
+  <% p("cluster-config.nodes").each do |node| %>
+    curl -X POST -H "Content-Type: application/json" http://<%= p("cluster-config.user") %>:<%= p("cluster-config.password") %>@<%= p("cluster-config.nodes")[0] %>:5984/_cluster_setup -d '{"action": "add_node", "host":"<%= node %>", "port": "5984", "username": "<%= p("cluster-config.user") %>", "password":"<%= p("cluster-config.password") %>"}'
+  <% end %>
+  curl -X POST -H "Content-Type: application/json" http://<%= p("cluster-config.user") %>:<%= p("cluster-config.password") %>@<%= p("cluster-config.nodes")[0] %>:5984/_cluster_setup -d '{"action": "finish_cluster"}'
+<% end %>
