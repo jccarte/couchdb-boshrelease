@@ -10,9 +10,9 @@ export HOME=/var/vcap
 
 
 
-tar xfv erlang/otp_src_19.2.tar.gz
-cd otp_src_19.2
+tar xfv erlang/otp_src_20.1.tar.gz
+cd otp_src_20.1
 ./configure --prefix=${BOSH_INSTALL_TARGET} --without-termcap
 make -j${CPUS} && make install
 # Alternatively, to copy archive contents:
-# cp -a otp_src_19.2/* $BOSH_INSTALL_TARGET
+# cp -a otp_src_20.1/* $BOSH_INSTALL_TARGET
