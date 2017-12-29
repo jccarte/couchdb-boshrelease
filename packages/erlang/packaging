@@ -11,6 +11,8 @@ export HOME=/var/vcap
 
 
 tar xfv erlang/otp_src_19.3.tar.gz
+
+# The Erlang 19.3 release still has 19.2 set as the directory inside it
 cd otp_src_19.2
 ./configure --prefix=${BOSH_INSTALL_TARGET} --without-termcap
 make -j${CPUS} && make install
