@@ -35,12 +35,21 @@ properties:
   couchdb.cluster.replicas:
     description: "The number of copies there is of every document. Replicas."
     default: 3
+  couchdb.db_fragmentation_percent:
+    description: "Auto Compaction Database Fragmentation Percentage, defaults to 60"
+    default: 60
+  couchdb.view_fragmentation_percent:
+    description: "Auto Compaction Database Fragmentation Percentage, defaults to 60"
+    default: 60
   couchdb.httpd_auth_secret:
     description: "auth secret shared by all cluster nodes"
     default: ~
   couchdb.user:
     description: "CouchDB 2.0 Cluster Admin User"
     default: admin
+  couchdb.use_checkpoints:
+    description: "Couchdb replicator use_checkpoints flag"
+    default: false
   couchdb.password_salt:
     description: "Salt for Admin User"
     default: ~
