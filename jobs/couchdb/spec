@@ -13,14 +13,15 @@ templates:
   config/local.ini: config/local.ini 
   config/vm.args: config/vm.args
   config/cert.pem.erb: config/cert.pem
+  config/chain.pem.erb: config/chain.pem
   config/key.pem.erb: config/key.pem
   data/properties.sh.erb: data/properties.sh
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
 
 provides:
-  - name: couchdb_nodes
-    type: couchdb_cluster
+  - name: couchdb_node
+    type: couchdb_node
 
 properties:
   couchdb.cluster.shards:
@@ -64,6 +65,9 @@ properties:
     default: false
   couchdb.ssl.cert:
     description: "SSL Certificate"
+    default: ~
+  couchdb.ssl.cacert:
+    description: "cacert chain"
     default: ~
   couchdb.ssl.key:
     description: "SSL Key"
