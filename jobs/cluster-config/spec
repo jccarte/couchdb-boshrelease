@@ -4,8 +4,8 @@ templates:
   errand.sh.erb: bin/run
 
 consumes:
-  - name: couchdb_nodes
-    type: couchdb_cluster
+  - name: couchdb_node
+    type: couchdb_node
     optional: true
 
 properties:
