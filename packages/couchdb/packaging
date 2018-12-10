@@ -17,9 +17,9 @@ PATH=/var/vcap/packages/icu/bin:$PATH
 export JS_CFLAGS=" -DXP_UNIX -I/var/vcap/packages/spidermonkey/include/js"
 export JS_LIBS="-L/var/vcap/packages/spidermonkey/lib -lmozjs185  -ldl  -lm -ldl"
 
-tar xfv couchdb/apache-couchdb-2.1.1.tar.gz
-cp couchdb/rebar.config.script apache-couchdb-2.1.1/src/couch/rebar.config.script
-cd apache-couchdb-2.1.1
+tar xfv couchdb/apache-couchdb-2.3.0.tar.gz
+cp couchdb/rebar.config.script apache-couchdb-2.3.0/src/couch/rebar.config.script
+cd apache-couchdb-2.3.0
 ./configure
 make release
 cp -a rel/couchdb/* $BOSH_INSTALL_TARGET

@@ -5,5 +5,5 @@ dependencies:
 - erlang
 - icu
 files:
-- couchdb/apache-couchdb-2.1.1.tar.gz
+- couchdb/apache-couchdb-2.3.0.tar.gz
 - couchdb/rebar.config.script
